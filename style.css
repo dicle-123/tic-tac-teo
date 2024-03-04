@@ -1,10 +1,35 @@
-body {
-  background-color: aquamarine;
+* {
   box-sizing: border-box;
 }
 
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f0f8ff;
+  text-align: center;
+  overflow-y: hidden;
+  background-color: cadetblue;
+}
+
 .container {
+  width: 302px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 1px;
+  padding: 20px;
+  background-color: brown;
+  margin: 25px auto;
+}
+h1 {
+  font-size: 3rem;
+}
+
+.btn {
+  padding: 10px 30px;
+  border: none;
+  background-color: brown;
+  color: #f0f8ff;
+  font-size: 1rem;
+  font-weight: 600;
 }
