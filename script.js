@@ -1,6 +1,5 @@
-const GameBoard = function () {
-  const board = Array.from({ length: 3 }, () => Array(3).fill(""));
-  const getBoard = () => board;
+const gameBoard = function (size) {
+  const board = Array(9).fill(null);
 
   const winnerCombos = [
     [0, 1, 2],
@@ -12,11 +11,15 @@ const GameBoard = function () {
     [0, 4, 8],
     [2, 4, 6],
   ];
+};
 
-  for (const combo of winnerCombos) {
-    const [a, b, c] = combo;
-    if (board[a] && board[a] === board[b] && board[b] === board[c]) {
-      console.log("kazanan", board[a]);
-    }
-  }
+const Player = function (name, marker) {
+  const container = document.querySelector(".container");
+  const cell = document.createElement("div");
+  cell.classList.add("cell");
+  container.appendChild(cell);
+
+  function addMark() {}
+
+  container.addEventListener("click", addMark);
 };
