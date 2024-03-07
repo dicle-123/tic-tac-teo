@@ -1,5 +1,6 @@
-const gameBoard = function (size) {
-  const board = Array(9).fill(null);
+const gameBoard = (function () {
+  const board = Array(9).fill("");
+  const getBoard = () => board;
 
   const winnerCombos = [
     [0, 1, 2],
@@ -11,15 +12,30 @@ const gameBoard = function (size) {
     [0, 4, 8],
     [2, 4, 6],
   ];
-};
 
-const Player = function (name, marker) {
-  const container = document.querySelector(".container");
-  const cell = document.createElement("div");
-  cell.classList.add("cell");
-  container.appendChild(cell);
+  for (const combo of winnerCombos) {
+    const [a, b, c] = combo;
+    if (board[a] && board[a] === board[b] && board[b] === board[c]) {
+      return board[a];
+    }
+  }
 
-  function addMark() {}
+  if (board.every((el = el !== ""))) {
+    return "Tie";
+  }
+  return null;
 
-  container.addEventListener("click", addMark);
-};
+  const makeMove = function (currentValue, index) {
+    if (board[index]) {
+      return;
+    }
+    board[index] = currentValue;
+    return currentValue;
+  };
+
+  return {
+    getBoard,
+    makeMove,
+    winnerCombos,
+  };
+})();
