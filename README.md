@@ -21,7 +21,7 @@ You can play the game live [here](https://dicle-123.github.io/tic-tac-teo/).
 
    ```bash
    git clone https://github.com/dicle-123/tic-tac-teo.git
-Navigate to the Project Directory
+## Navigate to the Project Directory
 
 bash
 
@@ -30,7 +30,7 @@ Open index.html in Your Browser
 
 Simply open the index.html file in your preferred web browser to start playing the game.
 
-Project Structure
+## Project Structure
 
 index.html: The main HTML file that sets up the game structure.
 
