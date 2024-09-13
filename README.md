@@ -31,6 +31,9 @@ Open index.html in Your Browser
 Simply open the index.html file in your preferred web browser to start playing the game.
 
 Project Structure
+
 index.html: The main HTML file that sets up the game structure.
+
 style.css: Contains styles for the game board and UI.
+
 script.js: JavaScript file that contains the logic for game functionality including game state management, winner detection, and player interactions.
